@@ -56,7 +56,7 @@ const generateBotResponse = async incomingMessageDiv => {
   } finally {
     userData.file = {};
     incomingMessageDiv.classList.remove('thinking');
-    chatBody.scrollTo({ top: chatBody.scrollHeight, behaivor: 'smooth' });
+    chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: 'smooth' });
   }
 };
 
@@ -82,7 +82,7 @@ const handleOutgoingMessage = e => {
   outgoingMessageDiv.querySelector('.message-text').innerText =
     userData.message;
   chatBody.appendChild(outgoingMessageDiv);
-  chatBody.scrollTo({ top: chatBody.scrollHeight, behaivor: 'smooth' });
+  chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: 'smooth' });
 
   setTimeout(() => {
     const messageContent = `  <svg
@@ -110,7 +110,7 @@ const handleOutgoingMessage = e => {
     );
 
     chatBody.appendChild(incomingMessageDiv);
-    chatBody.scrollTo({ top: chatBody.scrollHeight, behaivor: 'smooth' });
+    chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: 'smooth' });
 
     generateBotResponse(incomingMessageDiv);
   }, 300);

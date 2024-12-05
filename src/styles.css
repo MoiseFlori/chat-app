@@ -11,7 +11,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  height: calc(100vh - env(safe-area-inset-bottom));
   background: linear-gradient(#EEEEEE, #C8C7FF);
 }
 
@@ -77,6 +77,7 @@ body {
 
 .chat-body {
   padding: 25px 22px;
+  padding-bottom: 100px;
   display: flex;
   gap: 20px;
   height: calc(100% - 82px);
@@ -85,23 +86,6 @@ body {
   flex-direction: column;
   scrollbar-width: thin;
   scrollbar-color: #ccccf5, transparent;
-}
-
-
-.chat-body::-webkit-scrollbar {
-  width: 8px;
-
-}
-
-.chat-body::-webkit-scrollbar-thumb {
-  background: #ccccf5;
-
-  border-radius: 4px;
-}
-
-.chat-body::-webkit-scrollbar-track {
-  background: transparent;
-
 }
 
 .chat-body .message {
@@ -316,10 +300,10 @@ em-emoji-picker {
 body.show-emoji-picker em-emoji-picker {
   visibility: visible;
 }
-/* 
+
+
 @media (max-width: 375px) {
   .chatbot-popup {
-    min-width: 320px;
     width: 100vh;
     height: calc(100vh - env(safe-area-inset-bottom));
     max-width: none;
@@ -329,6 +313,7 @@ body.show-emoji-picker em-emoji-picker {
 
   .chat-body {
     padding: 10px 8px;
+    padding-bottom: 100px;
     gap: 10px;
 
   }
@@ -338,7 +323,7 @@ body.show-emoji-picker em-emoji-picker {
   }
 
   .header-info .logo-text {
-    font-size: 1rem;
+    font-size: 0.8rem;
 
   }
 
@@ -349,9 +334,17 @@ body.show-emoji-picker em-emoji-picker {
 
   .chat-form .message-input {
     height: 35px;
-    font-size: 0.85rem;
+    font-size: 0.7rem;
     line-height: 35px;
-  } */
+  }
 
+  .chat-body .message .message-text {
+    max-width: 65%;
+    font-size: 0.7rem;
+  }
 
-/* } */
+  .chat-body .bot-message .thinking-indicator .dot {
+    height: 4px;
+    width: 4px;
+  }
+}

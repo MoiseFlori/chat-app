@@ -176,12 +176,18 @@ window.addEventListener('resize', () => {
   }
 });
 
-function setViewportHeight() {
-  const vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
+function adjustChatHeight() {
+  const chatbotPopup = document.querySelector('.chatbot-popup');
+  const chatHeader = document.querySelector('.chat-header');
+  const chatFooter = document.querySelector('.chat-footer');
+  const chatBody = document.querySelector('.chat-body');
+
+  const headerHeight = chatHeader.offsetHeight;
+  const footerHeight = chatFooter.offsetHeight;
+
+  const availableHeight = window.innerHeight - headerHeight - footerHeight;
+  chatBody.style.height = `${availableHeight}px`;
 }
 
-// Setați valoarea la încărcare și când există o schimbare de înălțime (tastatura apare/dispare)
-window.addEventListener('load', setViewportHeight);
-window.addEventListener('resize', setViewportHeight);
-
+window.addEventListener('load', adjustChatHeight);
+window.addEventListener('resize', adjustChatHeight);

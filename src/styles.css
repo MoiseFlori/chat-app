@@ -305,20 +305,19 @@ body.show-emoji-picker em-emoji-picker {
 }
 
 @media (max-width: 768px) {
-  .chatbot-popup {
+  /* .chatbot-popup {
     width: 100vw;
     height: calc(var(--vh, 1vh) * 100);
     max-width: none;
     max-height: none;
     border-radius: 0;
-
-
-  }
+  } */
 
   .chat-body {
     padding: 10px 8px;
     padding-bottom: 100px;
     gap: 10px;
+    height: calc(100vh - 100px - 100px);
   }
 
 

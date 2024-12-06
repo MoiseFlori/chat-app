@@ -175,3 +175,13 @@ window.addEventListener('resize', () => {
       .scrollIntoView({ behavior: 'smooth' });
   }
 });
+
+function setViewportHeight() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// Setați valoarea la încărcare și când există o schimbare de înălțime (tastatura apare/dispare)
+window.addEventListener('load', setViewportHeight);
+window.addEventListener('resize', setViewportHeight);
+

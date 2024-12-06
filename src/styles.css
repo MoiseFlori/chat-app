@@ -304,37 +304,49 @@ body.show-emoji-picker em-emoji-picker {
 @media (max-width: 768px) {
   .chatbot-popup {
     width: 100vw;
-    height: calc(100vh - env(safe-area-inset-bottom));
-    /* Ajustează pentru "safe area" */
+    height: calc(var(--vh, 1vh) * 100);
     max-width: none;
     max-height: none;
     border-radius: 0;
+
+
   }
 
   .chat-body {
-    flex: 1;
-    /* Chat body preia tot spațiul disponibil */
     padding: 10px 8px;
-    overflow-y: auto;
-    /* Activează scroll-ul pe verticală pentru chat-body */
+    padding-bottom: 100px;
     gap: 10px;
-    box-sizing: border-box;
-    /* Include padding-ul în dimensiuni */
+  }
+
+
+
+  .chat-header {
+    padding: 10px 12px;
+  }
+
+  .header-info .logo-text {
+    font-size: 0.8rem;
+
   }
 
   .chat-footer {
     padding: 10px 8px;
-    background: #fff;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    /* O umbră pentru a evidenția footer-ul */
-    box-sizing: border-box;
+
   }
 
   .chat-form .message-input {
     height: 35px;
     font-size: 16px;
-    /* Suficient de mare pentru a evita zoom-ul */
     line-height: 35px;
-    padding-left: 10px;
+  }
+
+  .chat-body .message .message-text {
+    max-width: 65%;
+    font-size: 0.7rem;
+  }
+
+  .chat-body .bot-message .thinking-indicator .dot {
+    height: 4px;
+    width: 4px;
   }
 }

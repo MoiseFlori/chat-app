@@ -20,8 +20,8 @@ body {
   position: relative;
   width: 90vw;
   max-width: 680px;
-  height: 100%;
-  /* max-height: 600px; */
+  height: 90vh;
+  max-height: 600px;
   background: #fff;
   overflow: hidden;
   border-radius: 15px;
@@ -77,7 +77,6 @@ body {
 }
 
 .chat-body {
-  flex: 1;
   padding: 25px 22px;
   padding-bottom: 100px;
   display: flex;
@@ -196,8 +195,6 @@ body {
   bottom: 0;
   background: #fff;
   padding: 15px 22px 20px;
-  flex-shrink: 0;
-
 }
 
 
@@ -305,15 +302,15 @@ body.show-emoji-picker em-emoji-picker {
 }
 
 @media (max-width: 768px) {
-  .chatbot-popup {
-    width: 100vw;
-    height: calc(100vh - env(safe-area-inset-bottom));
-    max-width: none;
+  /* .chatbot-popup {
+    /* width: 90vw;
+    height: calc(100vh - env(safe-area-inset-bottom)); */
+  /* max-width: none;
     max-height: none;
     border-radius: 0;
 
 
-  }
+  } */
 
   .chat-body {
     padding: 10px 8px;

@@ -77,11 +77,11 @@ body {
 }
 
 .chat-body {
-  flex: 1;
   padding: 25px 22px;
   padding-bottom: 100px;
   display: flex;
   gap: 20px;
+  height: calc(100% - 82px);
   margin-bottom: 82px;
   overflow-y: auto;
   flex-direction: column;
@@ -305,7 +305,7 @@ body.show-emoji-picker em-emoji-picker {
 @media (max-width: 768px) {
   .chatbot-popup {
     width: 100vw;
-    /* height: 100vh; */
+    height: 70vh;
     max-width: none;
     max-height: none;
     border-radius: 0;

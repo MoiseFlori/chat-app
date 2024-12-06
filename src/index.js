@@ -167,3 +167,11 @@ const picker = new EmojiMart.Picker({
 chatForm.appendChild(picker);
 sendMessageButton.addEventListener('click', e => handleOutgoingMessage(e));
 fileUpload.addEventListener('click', () => fileInput.click());
+window.addEventListener('resize', () => {
+  if (window.innerHeight < 500) {
+    // Când tastatura este deschisă, înălțimea scade considerabil (în funcție de dispozitiv)
+    document
+      .querySelector('.chat-footer')
+      .scrollIntoView({ behavior: 'smooth' });
+  }
+});

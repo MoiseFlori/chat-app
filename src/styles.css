@@ -20,7 +20,7 @@ body {
   position: relative;
   width: 90vw;
   max-width: 680px;
-  height: 90vh;
+  height: 100vh;
   max-height: 600px;
   background: #fff;
   overflow: hidden;
@@ -302,51 +302,39 @@ body.show-emoji-picker em-emoji-picker {
 }
 
 @media (max-width: 768px) {
-  /* .chatbot-popup {
-    /* width: 90vw;
-    height: calc(100vh - env(safe-area-inset-bottom)); */
-  /* max-width: none;
+  .chatbot-popup {
+    width: 100vw;
+    height: calc(100vh - env(safe-area-inset-bottom));
+    /* Ajustează pentru "safe area" */
+    max-width: none;
     max-height: none;
     border-radius: 0;
-
-
-  } */
+  }
 
   .chat-body {
+    flex: 1;
+    /* Chat body preia tot spațiul disponibil */
     padding: 10px 8px;
-    padding-bottom: 100px;
+    overflow-y: auto;
+    /* Activează scroll-ul pe verticală pentru chat-body */
     gap: 10px;
-  }
-
-
-
-  .chat-header {
-    padding: 10px 12px;
-  }
-
-  .header-info .logo-text {
-    font-size: 0.8rem;
-
+    box-sizing: border-box;
+    /* Include padding-ul în dimensiuni */
   }
 
   .chat-footer {
     padding: 10px 8px;
-
+    background: #fff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    /* O umbră pentru a evidenția footer-ul */
+    box-sizing: border-box;
   }
 
   .chat-form .message-input {
     height: 35px;
-    font-size: 0.7rem;
+    font-size: 16px;
+    /* Suficient de mare pentru a evita zoom-ul */
     line-height: 35px;
-  }
-
-  .chat-body .message .message-text {
-    max-width: 65%;
-    font-size: 0.7rem;
-  }
-
-  .chat-body .bot-message .thinking-indicator .dot {
-    height: 4px;
-    width: 4px;
+    padding-left: 10px;
   }
 }

@@ -304,11 +304,9 @@ body.show-emoji-picker em-emoji-picker {
 @media (max-width: 768px) {
   .chatbot-popup {
     width: 90vw;
-    height: 300px;
+    height: 70vh;
     max-width: none;
     max-height: none;
-    border-radius: 0;
-
 
   }
 

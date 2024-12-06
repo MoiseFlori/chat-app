@@ -34,7 +34,6 @@ body {
   background: #5350C4;
   padding: 15px 22px;
   justify-content: space-between;
-  flex-shrink: 0;
 }
 
 .chat-header .header-info {
@@ -79,16 +78,15 @@ body {
 
 .chat-body {
   padding: 25px 22px;
-  /* padding-bottom: 100px; */
+  padding-bottom: 100px;
   display: flex;
   gap: 20px;
-  /* height: calc(100% - 82px);
-  margin-bottom: 82px; */
+  height: calc(100% - 82px);
+  margin-bottom: 82px;
   overflow-y: auto;
   flex-direction: column;
   scrollbar-width: thin;
   scrollbar-color: #ccccf5, transparent;
-  flex: 1;
 }
 
 .chat-body .message {
@@ -194,10 +192,9 @@ body {
 .chat-footer {
   position: absolute;
   width: 100%;
-  bottom: 10px;
+  bottom: 0;
   background: #fff;
   padding: 15px 22px 20px;
-  flex-shrink: 0;
 }
 
 
@@ -305,19 +302,20 @@ body.show-emoji-picker em-emoji-picker {
 }
 
 @media (max-width: 768px) {
-  /* .chatbot-popup {
+  .chatbot-popup {
     width: 100vw;
-    height: calc(var(--vh, 1vh) * 100);
+    height: 700px;
     max-width: none;
     max-height: none;
     border-radius: 0;
-  } */
+
+
+  }
 
   .chat-body {
     padding: 10px 8px;
     padding-bottom: 100px;
     gap: 10px;
-    height: calc(100vh - 100px - 100px);
   }
 
 

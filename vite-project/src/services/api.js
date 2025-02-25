@@ -1,5 +1,7 @@
 
 import axios from 'axios';
+
+
 const API_KEY = `AIzaSyA1g06lgmxKqjQb-Z5CzgqpcEqaAeojLXA`;
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
 

@@ -1,0 +1,12 @@
+.chatBody {
+  padding: 25px 22px;
+  padding-bottom: 100px;
+  display: flex;
+  gap: 20px;
+  height: calc(100% - 82px);
+  margin-bottom: 82px;
+  overflow-y: auto;
+  flex-direction: column;
+  scrollbar-width: thin;
+  scrollbar-color: #ccccf5, transparent;
+}

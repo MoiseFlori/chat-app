@@ -1,0 +1,53 @@
+
+.messageWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+
+.botWrapper {
+  justify-content: flex-start;
+}
+
+
+.userWrapper {
+  justify-content: flex-end;
+}
+
+.userMessage {
+  background-color: #5350C4;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  max-width: 70%;
+  text-align: left;
+}
+
+
+.botMessage {
+  background-color: #f1f1f1;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 8px;
+  max-width: 70%;
+  text-align: left;
+}
+
+
+.botIcon {
+  font-size: 30px;
+  color: #5350C4;
+}
+
+.userIcon {
+  font-size: 30px;
+  color: #5350C4;
+}
+
+.imageMessage {
+  max-width: 350px;
+  border-radius: 5px;
+  margin-top: 5px;
+}

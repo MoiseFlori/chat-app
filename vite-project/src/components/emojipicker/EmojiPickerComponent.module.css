@@ -1,0 +1,21 @@
+.emojiWrapper {
+  position: relative;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.emojiPicker {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  bottom: 100px;
+  right:20px;
+  z-index: 100;
+  border-radius: 8px;
+}

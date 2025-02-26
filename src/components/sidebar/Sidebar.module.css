@@ -16,7 +16,22 @@
   display: none;
 }
 
+.chatList{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
+.listItem{
+  box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.05),
+   6px 6px 10px rgba(0, 0, 0, 0.5);
+}
+.listItem:active{
+  box-shadow:  2px 2px 2px rgba(255, 255, 255, 0.05),
+   -2px -2px 2px rgba(0, 0, 0, 0.5);
+}
 
 @media (max-width: 767px) {
   .sidebar {

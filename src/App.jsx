@@ -17,11 +17,17 @@ const App = () => {
   const conversations = useSelector(state => state.chat.conversations);
   const activeChatId = useSelector(state => state.chat.activeChatId);
 
+const messages =
+  activeChatId && conversations[activeChatId]?.messages
+    ? conversations[activeChatId].messages
+    : [];
 
-  const messages =
-    activeChatId && conversations[activeChatId]
-      ? conversations[activeChatId]
-      : [];
+  // 📌 Creează automat un chat dacă nu există unul activ
+  useEffect(() => {
+    if (!activeChatId) {
+      dispatch(startNewChat()); // Creează un nou chat la pornire
+    }
+  }, [activeChatId, dispatch]);
 
   const handleSendMessage = async ({ text, image }) => {
     if (!activeChatId) return;

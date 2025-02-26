@@ -15,7 +15,7 @@
   display: flex;
   width: 100%;
   align-items: center;
-  
+
 }
 
 .messageInput {
@@ -25,7 +25,8 @@
   border: 1px solid #ccc;
   resize: none;
   background: rgb(219, 219, 219);
-  
+  font-size: 16px;
+  touch-action: manipulation;
 }
 
 .footerActions {

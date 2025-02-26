@@ -4,7 +4,10 @@ import Message from '../message/Message';
 
 const ChatBody = ({ messages }) => {
 
-
+    if (!Array.isArray(messages)) {
+      console.error('Eroare: `messages` nu este un array.', messages);
+      return <div className={styles.chatBody}>No messages yet.</div>;
+    }
   return (
     <div className={styles.chatBody}>
       {messages.map((msg, index) => (

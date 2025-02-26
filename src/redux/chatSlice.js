@@ -1,8 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const initialChatId = Date.now().toString(); // 📌 Folosim timestamp valid pentru primul chat
+
 const initialState = {
-  conversations: {}, // 📌 Garantează că `conversations` este un obiect, nu `undefined`
-  activeChatId: null,
+  conversations: {
+    [initialChatId]: {
+      messages: [{ text: 'Hello! How can I help you today?', sender: 'bot' }],
+      title: 'New Chat',
+    },
+  },
+  activeChatId: initialChatId, // 📌 Setăm primul chat activ corect
 };
 
 const chatSlice = createSlice({
@@ -12,17 +19,19 @@ const chatSlice = createSlice({
     addMessage: (state, action) => {
       const { chatId, message } = action.payload;
 
-      // 📌 Dacă conversația nu există, o creează
       if (!state.conversations[chatId]) {
-        state.conversations[chatId] = [];
+        state.conversations[chatId] = { messages: [], title: 'New Chat' };
       }
 
-      state.conversations[chatId].push(message);
+      state.conversations[chatId].messages.push(message);
     },
 
     startNewChat: state => {
       const newChatId = Date.now().toString();
-      state.conversations[newChatId] = [];
+      state.conversations[newChatId] = {
+        messages: [],
+        title: 'Generating title...',
+      };
       state.activeChatId = newChatId;
     },
 

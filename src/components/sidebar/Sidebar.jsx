@@ -16,7 +16,7 @@ const Sidebar = ({ isOpen, onClose }) => {
       <h3>Saved Chats</h3>
       <ul className={styles.chatList}>
         {Object.keys(conversations).map(chatId => (
-          <li key={chatId} onClick={() => dispatch(setActiveChat(chatId))}>
+          <li className={styles.listItem} key={chatId} onClick={() => dispatch(setActiveChat(chatId))}>
             {new Date(parseInt(chatId)).toLocaleString()}
           </li>
         ))}

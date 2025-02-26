@@ -1,5 +1,5 @@
 .chatFooter {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   background: linear-gradient(0deg, #1d1e22, #42444d);
   padding: 15px 18px;

@@ -1,13 +1,10 @@
 .chatBody {
   padding: 20px 18px;
-  display: flex;
-  gap: 20px;
   max-height: calc(100vh - 190px);
   width: 100%;
   overflow-y: auto;
-  flex-direction: column;
   background: rgb(219, 219, 219);
   padding-bottom: 50px;
+  flex-grow: 1;
 
 }
-

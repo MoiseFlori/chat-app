@@ -22,24 +22,11 @@ const App = () => {
       ? conversations[activeChatId].messages
       : [];
 
-  useEffect(() => {
-    const setViewportHeight = () => {
-      document.documentElement.style.setProperty(
-        '--vh',
-        `${window.innerHeight}px`
-      );
-    };
 
-    setViewportHeight();
-    window.addEventListener('resize', setViewportHeight);
 
-    return () => window.removeEventListener('resize', setViewportHeight);
-  }, []);
-
-  // 📌 Creează automat un chat dacă nu există unul activ
   useEffect(() => {
     if (!activeChatId) {
-      dispatch(startNewChat()); // Creează un nou chat la pornire
+      dispatch(startNewChat());
     }
   }, [activeChatId, dispatch]);
 

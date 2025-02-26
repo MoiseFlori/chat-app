@@ -6,8 +6,6 @@
   overflow-y: auto;
   background: rgb(219, 219, 219);
   padding: 20px 18px 80px;
-  /* Spațiu pentru footer */
   min-height: 0;
   height: calc(var(--vh, 100vh) - 190px);
-  /* Folosim variabila dinamică */
 }

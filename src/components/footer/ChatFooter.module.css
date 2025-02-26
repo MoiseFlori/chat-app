@@ -1,14 +1,15 @@
 .chatFooter {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   background: linear-gradient(0deg, #1d1e22, #42444d);
   padding: 15px 18px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   z-index: 999;
   min-width: 375px;
   width: 100%;
+ 
 }
 
 .chatForm {

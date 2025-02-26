@@ -17,10 +17,24 @@ const App = () => {
   const conversations = useSelector(state => state.chat.conversations);
   const activeChatId = useSelector(state => state.chat.activeChatId);
 
-const messages =
-  activeChatId && conversations[activeChatId]?.messages
-    ? conversations[activeChatId].messages
-    : [];
+  const messages =
+    activeChatId && conversations[activeChatId]?.messages
+      ? conversations[activeChatId].messages
+      : [];
+
+  useEffect(() => {
+    const setViewportHeight = () => {
+      document.documentElement.style.setProperty(
+        '--vh',
+        `${window.innerHeight}px`
+      );
+    };
+
+    setViewportHeight();
+    window.addEventListener('resize', setViewportHeight);
+
+    return () => window.removeEventListener('resize', setViewportHeight);
+  }, []);
 
   // 📌 Creează automat un chat dacă nu există unul activ
   useEffect(() => {

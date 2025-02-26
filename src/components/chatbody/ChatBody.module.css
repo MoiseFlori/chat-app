@@ -11,3 +11,11 @@
 
 }
 
+@supports (-webkit-touch-callout: none) {
+  .chatBody {
+    height: calc(100vh - 190px);
+    /* 📌 Fix pentru iOS */
+    min-height: 0;
+    /* 📌 Împiedică depășirea ecranului */
+  }
+}

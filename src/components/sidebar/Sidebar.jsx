@@ -13,7 +13,7 @@ const Sidebar = ({ isOpen, onClose }) => {
       <button className={styles.closeButton} onClick={onClose}>
         <IoCloseOutline />
       </button>
-      <h3>Saved Chats</h3>
+      <h3 className={styles.history}>History</h3>
       <ul className={styles.chatList}>
         {Object.keys(conversations).map(chatId => (
           <li className={styles.listItem} key={chatId} onClick={() => dispatch(setActiveChat(chatId))}>

@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialChatId = Date.now().toString(); // 📌 Folosim timestamp valid pentru primul chat
+const initialChatId = Date.now().toString();
 
 const initialState = {
   conversations: {
@@ -9,7 +9,7 @@ const initialState = {
       title: 'New Chat',
     },
   },
-  activeChatId: initialChatId, // 📌 Setăm primul chat activ corect
+  activeChatId: initialChatId, 
 };
 
 const chatSlice = createSlice({

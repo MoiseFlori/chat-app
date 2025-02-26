@@ -2,15 +2,16 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 250px;
+  width: 200px;
   min-height: 100vh;
   background: linear-gradient(90deg, #1f1f1f 0%, #2b2d35 50%, #42444d 100%);
   color: rgb(247, 247, 247);
-  padding: 20px;
+  padding:  0 20px;
   box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
   z-index: 1000;
 }
+
 
 .closeButton {
   display: none;

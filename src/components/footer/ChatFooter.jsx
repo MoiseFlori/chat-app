@@ -38,6 +38,7 @@ const ChatFooter = ({ onSendMessage }) => {
 
         <div className={styles.footerActions}>
           <EmojiPickerComponent
+            className={styles.emojiPicker}
             onEmojiSelect={emoji => setMessage(prev => prev + emoji)}
           />
 

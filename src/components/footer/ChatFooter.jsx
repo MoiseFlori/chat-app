@@ -6,22 +6,22 @@ import styles from './ChatFooter.module.css';
 
 const ChatFooter = ({ onSendMessage }) => {
   const [message, setMessage] = useState('');
-  const [image, setImage] = useState(null); 
+  const [image, setImage] = useState(null);
 
   const handleSubmit = e => {
     e.preventDefault();
 
     if (message.trim() || image) {
       onSendMessage({ text: message, image });
-      setMessage(''); 
-      setImage(null); 
+      setMessage('');
+      setImage(null);
     }
   };
 
   const handleKeyPress = e => {
     if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault(); 
-      handleSubmit(e); 
+      e.preventDefault();
+      handleSubmit(e);
     }
   };
 
@@ -33,19 +33,20 @@ const ChatFooter = ({ onSendMessage }) => {
           className={styles.messageInput}
           value={message}
           onChange={e => setMessage(e.target.value)}
-          onKeyDown={handleKeyPress} 
+          onKeyDown={handleKeyPress}
         />
 
-  
-        <EmojiPickerComponent
-          onEmojiSelect={emoji => setMessage(prev => prev + emoji)}
-        />
+        <div className={styles.footerActions}>
+          <EmojiPickerComponent
+            onEmojiSelect={emoji => setMessage(prev => prev + emoji)}
+          />
 
-        <FileUpload onFileSelect={imgUrl => setImage(imgUrl)} />
+          <FileUpload onFileSelect={imgUrl => setImage(imgUrl)} />
 
-        <button type="submit" className={styles.sendButton}>
-          <FaArrowUp size={24} />
-        </button>
+          <button type="submit" className={styles.sendButton}>
+            <FaArrowUp size={24} />
+          </button>
+        </div>
       </form>
     </div>
   );

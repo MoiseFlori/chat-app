@@ -7,7 +7,17 @@
   border: none;
   cursor: pointer;
   font-size: 1.5rem;
-  color: #555;
+  color: #ffffff;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+.iconButton:hover {
+  transform: scale(1.2);
+}
+
+.iconButton:active {
+  transform: scale(0.95);
 }
 
 .emojiPicker {
@@ -15,7 +25,7 @@
   width: 400px;
   height: 300px;
   bottom: 100px;
-  right:20px;
+  right: 20px;
   z-index: 100;
   border-radius: 8px;
 }

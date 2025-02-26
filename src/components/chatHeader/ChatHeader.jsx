@@ -1,17 +1,20 @@
-import styles from "./ChatHeader.module.css";
-import { IoIosArrowDown } from 'react-icons/io';
+import styles from './ChatHeader.module.css';
+import { VscNewFile } from 'react-icons/vsc';
 import { AiFillRobot } from 'react-icons/ai';
+import { CgMenuRight } from 'react-icons/cg';
 
-
-const ChatHeader = () => {
+const ChatHeader = ({ onNewChat, onToggleSidebar, hideMenu }) => {
   return (
     <div className={styles.chatHeader}>
+      {!hideMenu && (
+        <CgMenuRight className={styles.menu} onClick={onToggleSidebar} />
+      )}
       <div className={styles.headerLogo}>
         <AiFillRobot className={styles.logoIcon} />
         <h2 className={styles.logoText}>Chatbot</h2>
       </div>
-      <button id="close-chatbot" className={styles.closeChatbot}>
-        <IoIosArrowDown />
+      <button className={styles.newfilebtn} onClick={onNewChat}>
+        <VscNewFile />
       </button>
     </div>
   );

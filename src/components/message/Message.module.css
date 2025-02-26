@@ -17,33 +17,33 @@
 }
 
 .userMessage {
-  background-color: #5350C4;
+  background-color: #000000;
   color: white;
-  padding: 8px 12px;
+  padding: 8px 8px;
   border-radius: 8px;
-  max-width: 70%;
+  max-width: 50%;
   text-align: left;
 }
 
 
 .botMessage {
-  background-color: #f1f1f1;
+  background-color: #fefefe;
   color: black;
-  padding: 8px 12px;
+  padding: 8px 8px;
   border-radius: 8px;
-  max-width: 70%;
+  max-width: 50%;
   text-align: left;
 }
 
 
 .botIcon {
-  font-size: 30px;
-  color: #5350C4;
+  font-size: 25px;
+  color: #000000;
 }
 
 .userIcon {
-  font-size: 30px;
-  color: #5350C4;
+  font-size: 25px;
+  color: #000000;
 }
 
 .imageMessage {

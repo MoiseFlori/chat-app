@@ -3,6 +3,8 @@ import styles from './ChatBody.module.css';
 import Message from '../message/Message';
 
 const ChatBody = ({ messages }) => {
+
+
   return (
     <div className={styles.chatBody}>
       {messages.map((msg, index) => (

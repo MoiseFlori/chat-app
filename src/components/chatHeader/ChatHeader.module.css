@@ -1,9 +1,18 @@
 .chatHeader {
   display: flex;
   align-items: center;
-  background: #5350C4;
+  background: linear-gradient(0deg, #1d1e22, #42444d);
   padding: 15px 22px;
   justify-content: space-between;
+  min-width: 375px;
+
+}
+
+.menu {
+  color: white;
+  height: 35px;
+  width: 35px;
+
 }
 
 .headerLogo {
@@ -12,22 +21,22 @@
   align-items: center;
 }
 
- .logoText {
+.logoText {
   color: #fff;
   font-size: 1.51rem;
   font-weight: 600;
 }
 
-.logoIcon{
+.logoIcon {
   height: 35px;
   width: 35px;
   background: #fff;
   padding: 6px;
-  fill: #5350C4;
+  fill: black;
   border-radius: 50%;
 }
 
-.closeChatbot {
+.newfilebtn {
   border: none;
   color: #fff;
   height: 60px;
@@ -41,3 +50,18 @@
   transition: 0.2s ease;
 }
 
+@media screen and (min-width:768px) {
+  .chatHeader {
+    min-width: 768px;
+  }
+
+  .menu{
+    display: none;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .chatHeader {
+    min-width: 1024px;
+  }
+}

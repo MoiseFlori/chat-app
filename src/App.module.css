@@ -1,0 +1,21 @@
+.app {
+  display: flex;
+  transition: margin-right 0.3s ease-in-out;
+}
+
+
+.sidebarOpen .mainContent {
+  margin-left: 250px;
+}
+
+.mainContent {
+  flex-grow: 1;
+  width: 100%;
+  transition: margin-right 0.3s ease-in-out;
+}
+
+@media (max-width: 767px) {
+  .sidebarOpen .mainContent {
+    margin-left: 0;
+  }
+}

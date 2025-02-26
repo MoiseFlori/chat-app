@@ -1,14 +1,21 @@
 .chatFooter {
+  position: fixed;
+  bottom: 0;
+  background: linear-gradient(0deg, #1d1e22, #42444d);
+  padding: 15px 18px;
   display: flex;
-  padding: 10px;
-  border-top: 1px solid #ccc;
-  background: #fff;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+  min-width: 375px;
+  width: 100%;
 }
 
 .chatForm {
   display: flex;
   width: 100%;
   align-items: center;
+  
 }
 
 .messageInput {
@@ -17,12 +24,15 @@
   border-radius: 5px;
   border: 1px solid #ccc;
   resize: none;
+  background: rgb(219, 219, 219);
+  
 }
 
-.chatControls {
+.footerActions {
   display: flex;
-  gap: 8px;
   align-items: center;
+  gap: 10px;
+  margin-left: 10px;
 }
 
 .iconButton {
@@ -34,10 +44,31 @@
 }
 
 .sendButton {
-  background: #5350C4;
-  color: white;
+  color: rgb(255, 255, 255);
   border: none;
-  padding: 8px;
+  background: none;
+  padding: 4px;
   border-radius: 50%;
   cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.sendButton:hover {
+  transform: scale(1.2);
+}
+
+@media screen and (min-width: 768px) {
+  .chatFooter {
+    width: calc(100% - 250px);
+    min-width: 768px;
+    left: 250px;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  .chatFooter {
+    min-width: 1024px;
+  }
+
 }
